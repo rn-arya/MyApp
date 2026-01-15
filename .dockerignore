@@ -1,0 +1,16 @@
+**/bin/
+**/obj/
+**/.vs/
+**/.vscode/
+**/.idea/
+**/*.user
+**/*.suo
+**/*.csproj.user
+**/node_modules/
+**/coverage/
+**/TestResults/
+Dockerfile*
+docker-compose*.yml
+.git
+.gitignore
+.env
