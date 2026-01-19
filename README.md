@@ -32,3 +32,11 @@ Dockerfile
 3. http://localhost:5271/api/WeatherForecast (used to open the api in browser which is running in docker)
 
   
+# Best way to run in docker
+
+## Add myapp-docker-compose.yml
+1. Used docker file for context in myapp-docker-compose.yml to build the image and run the container. Its best practice for development bcz just modify the code and it will automatically build and run the container. don't need to build image everytime.
+2. __Important__ Used - __TestApi_BaseUrl=http://testapi:8080__ to access the api in my app bcz the service name is testapi and not localhost bcz localhost will search endpoint in same container. Otherwise will have to use service name __http://host.docker.internal:5215__
+## how to run in docker
+1. docker compose -f myapp-docker-compose.yml up -d
+2. http://localhost:5271/api/WeatherForecast (used to open the api in browser which is running in docker)   
