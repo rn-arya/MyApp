@@ -4,11 +4,11 @@
 
 -Step 1 - Run below command in terminal to create a .net api project with controllers
 
-'''.Net 9.0
+```.Net 9.0
 dotnet new webapi --use-controllers -o MyApp
 code -r MyApp
 dotnet run
-'''
+```
 -Step 2 - Add .dockerignore for docker to ignore the obj folder and bin folder in docker
 -Step 3 - Add a docker file (Dockerfile) to build the image and run the container
 
