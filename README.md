@@ -1,11 +1,15 @@
-# This is test api for docker container and other research
+# Test api (MyAPP) for docker container
 
-## Create a .net api project
+## Create another .net api project (myapp) and run it in docker container locally or in docker hub
 
-## 1) Create the project with controllers
+-Step 1 - Run below command in terminal to create a .net api project with controllers
+'''
 dotnet new webapi --use-controllers -o MyApp
 code -r MyApp
 dotnet run
+'''
+-Step 2 - Add .dockerignore for docker to ignore the obj folder and bin folder in docker
+-Step 3 - Add a docker file (Dockerfile) to build the image and run the container
 
 # Method 1 -
 
