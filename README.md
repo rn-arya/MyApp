@@ -2,15 +2,15 @@
 
 ## Create another .net api project (myapp) and run it in docker container locally or in docker hub
 
--Step 1 - Run below command in terminal to create a .net api project with controllers
+- Step 1 - Run below command in terminal to create a .net api project with controllers
 
 ```.Net 9.0
 dotnet new webapi --use-controllers -o MyApp
 code -r MyApp
 dotnet run
 ```
--Step 2 - Add .dockerignore for docker to ignore the obj folder and bin folder in docker
--Step 3 - Add a docker file (Dockerfile) to build the image and run the container
+- Step 2 - Add .dockerignore for docker to ignore the obj folder and bin folder in docker
+- Step 3 - Add a docker file (Dockerfile) to build the image and run the container
 
 # Method 1 -
 
@@ -21,17 +21,11 @@ builder.Services.AddHttpClient("TestAPI", client =>
     client.BaseAddress = new Uri("http://host.docker.internal:5215");
 });
 ```
-Why service names? Inside the compose network, http://testapi1:8080 resolves to the testapi1 container.
+Why service names? Inside the compose network, http://testapi:8080 resolves to the testapi container.
 Don’t use localhost from one container to reach another; localhost would refer to the same container.
 
 ## 2) Open in browser
 [http://localhost:5271/api/WeatherForecast](http://localhost:5271/api/WeatherForecast)
-
-## Add .dockerignore for docker
-.dockerignore
-
-## Add dockerfile to create docker image
-Dockerfile
 
 ## How to run in docker
 1. docker build -t testapp . (used to build the image)
