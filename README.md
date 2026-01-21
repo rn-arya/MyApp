@@ -3,7 +3,8 @@
 ## Create another .net api project (myapp) and run it in docker container locally or in docker hub
 
 -Step 1 - Run below command in terminal to create a .net api project with controllers
-'''
+
+'''.Net 9.0
 dotnet new webapi --use-controllers -o MyApp
 code -r MyApp
 dotnet run
