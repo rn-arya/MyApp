@@ -25,12 +25,12 @@ Why service names? Inside the compose network, http://testapi:8080 resolves to t
 Don’t use localhost from one container to reach another; localhost would refer to the same container.
 
 #### 2) Open in browser
-[http://localhost:5271/api/WeatherForecast](http://localhost:5271/api/WeatherForecast)
+([http://localhost:5271/api/WeatherForecast](http://localhost:5271/api/myapp))
 
 #### How to run in docker
 1. docker build -t testapp . (used to build the image)
 2. docker run -p 5271:80 testapp (used to run the image)
-3. [http://localhost:5271/api/WeatherForecast](http://localhost:5271/api/WeatherForecast) (used to open the api in browser which is running in docker)
+3. [http://localhost:5271/api/myapp](http://localhost:5271/api/myapp) (used to open the api in browser which is running in docker)
 
 ### Method 2 (Best way to run in docker) -
 
@@ -39,4 +39,4 @@ Don’t use localhost from one container to reach another; localhost would refer
 2. __Important__ Used - __TestApi_BaseUrl=http://testapi:8080__ to access the api in my app bcz the service name is testapi and not localhost bcz localhost will search endpoint in same container. Otherwise will have to use service name __http://host.docker.internal:5215__
 #### how to run in docker
 1. docker compose -f myapp-docker-compose.yml up -d
-2. [http://localhost:5271/api/WeatherForecast](http://localhost:5271/api/WeatherForecast) (used to open the api in browser which is running in docker)
+2. [http://localhost:5271/api/myapp](http://localhost:5271/api/myapp) (used to open the api in browser which is running in docker)
