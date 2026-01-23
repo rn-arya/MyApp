@@ -25,7 +25,7 @@ Why service names? Inside the compose network, http://testapi:8080 resolves to t
 Don’t use localhost from one container to reach another; localhost would refer to the same container.
 
 #### 2) Open in browser
-([http://localhost:5271/api/WeatherForecast](http://localhost:5271/api/myapp))
+[http://localhost:5271/api/myapp](http://localhost:5271/api/myapp)
 
 #### How to run in docker
 1. docker build -t testapp . (used to build the image)
